@@ -72,15 +72,15 @@ void VertexPaintFunctions::PrintTaskLog(FVertexPaintDebugSettings debugSettings,
 
 // Get Closest Vertex Data On Mesh Wrapper
 
-void VertexPaintFunctions::GetClosestVertexDataOnMesh_Wrapper(UVertexPaintDetectionComponent* runtimeVertexPaintAndDetectionComponent, UPrimitiveComponent* meshComponent, FVertexDetectInfoStruct getClosestVertexDataStruct, FVertexDetectAdditionalDataToPassThrough additionalDataToPassThrough) {
+void VertexPaintFunctions::GetClosestVertexDataOnMesh_Wrapper(UVertexPaintDetectionComponent* VertexPaintComp, UPrimitiveComponent* meshComponent, FVertexDetectInfoStruct getClosestVertexDataStruct, FVertexDetectAdditionalDataToPassThrough additionalDataToPassThrough) {
 
-	if (IsValid(runtimeVertexPaintAndDetectionComponent)) {
+	if (IsValid(VertexPaintComp)) {
 
 		getClosestVertexDataStruct.meshComponent = meshComponent;
 
 		// Note nothing more should be set here, because if a C++ Class calls the Paint/Detection Function Right Away it shouldn't lose out on anything being set
 
-		runtimeVertexPaintAndDetectionComponent->GetClosestVertexDataOnMesh(getClosestVertexDataStruct, additionalDataToPassThrough);
+		VertexPaintComp->GetClosestVertexDataOnMesh(getClosestVertexDataStruct, additionalDataToPassThrough);
 	}
 
 	else {
@@ -94,15 +94,15 @@ void VertexPaintFunctions::GetClosestVertexDataOnMesh_Wrapper(UVertexPaintDetect
 
 // Get All Vertex Colors Only Wrapper
 
-void VertexPaintFunctions::GetAllVertexColorsOnly_Wrapper(UVertexPaintDetectionComponent* runtimeVertexPaintAndDetectionComponent, UPrimitiveComponent* meshComponent, FVertexDetectGetColorsOnlyStruct getAllVertexColorsStruct, FVertexDetectAdditionalDataToPassThrough additionalDataToPassThrough) {
+void VertexPaintFunctions::GetAllVertexColorsOnly_Wrapper(UVertexPaintDetectionComponent* VertexPaintComp, UPrimitiveComponent* meshComponent, FVertexDetectGetColorsOnlyStruct getAllVertexColorsStruct, FVertexDetectAdditionalDataToPassThrough additionalDataToPassThrough) {
 
-	if (IsValid(runtimeVertexPaintAndDetectionComponent)) {
+	if (IsValid(VertexPaintComp)) {
 
 		getAllVertexColorsStruct.meshComponent = meshComponent;
 
 		// Note nothing more should be set here, because if a C++ Class calls the Paint/Detection Function Right Away it shouldn't lose out on anything being set
 
-		runtimeVertexPaintAndDetectionComponent->GetAllVertexColorsOnly(getAllVertexColorsStruct, additionalDataToPassThrough);
+		VertexPaintComp->GetAllVertexColorsOnly(getAllVertexColorsStruct, additionalDataToPassThrough);
 	}
 
 	else {
@@ -116,15 +116,15 @@ void VertexPaintFunctions::GetAllVertexColorsOnly_Wrapper(UVertexPaintDetectionC
 
 // Paint on Mesh at Location Wrapper
 
-void VertexPaintFunctions::PaintOnMeshAtLocation_Wrapper(UVertexPaintDetectionComponent* runtimeVertexPaintAndDetectionComponent, UPrimitiveComponent* meshComponent, FVertexPaintAtLocationStruct paintAtLocationStruct, FVertexDetectAdditionalDataToPassThrough additionalDataToPassThrough) {
+void VertexPaintFunctions::PaintOnMeshAtLocation_Wrapper(UVertexPaintDetectionComponent* VertexPaintComp, UPrimitiveComponent* meshComponent, FVertexPaintAtLocationStruct paintAtLocationStruct, FVertexDetectAdditionalDataToPassThrough additionalDataToPassThrough) {
 
-	if (IsValid(runtimeVertexPaintAndDetectionComponent)) {
+	if (IsValid(VertexPaintComp)) {
 
 		paintAtLocationStruct.meshComponent = meshComponent;
 
 		// Note nothing more should be set here, because if a C++ Class calls the Paint/Detection Function Right Away it shouldn't lose out on anything being set
 
-		runtimeVertexPaintAndDetectionComponent->PaintOnMeshAtLocation(paintAtLocationStruct, additionalDataToPassThrough);
+		VertexPaintComp->PaintOnMeshAtLocation(paintAtLocationStruct, additionalDataToPassThrough);
 	}
 
 	else {
@@ -138,16 +138,16 @@ void VertexPaintFunctions::PaintOnMeshAtLocation_Wrapper(UVertexPaintDetectionCo
 
 // Paint Within Area Wrapper
 
-void VertexPaintFunctions::PaintOnMeshWithinArea_Wrapper(UVertexPaintDetectionComponent* runtimeVertexPaintAndDetectionComponent, UPrimitiveComponent* meshComponent, TArray<FVertexPainthWithinArea_ComponentToCheckIfIsWithinInfo> componentsToCheckIfIsWithin, FVertexPainthWithinAreaStruct paintWithinAreaStruct, FVertexDetectAdditionalDataToPassThrough additionalDataToPassThrough) {
+void VertexPaintFunctions::PaintOnMeshWithinArea_Wrapper(UVertexPaintDetectionComponent* VertexPaintComp, UPrimitiveComponent* meshComponent, TArray<FVertexPainthWithinArea_ComponentToCheckIfIsWithinInfo> componentsToCheckIfIsWithin, FVertexPainthWithinAreaStruct paintWithinAreaStruct, FVertexDetectAdditionalDataToPassThrough additionalDataToPassThrough) {
 
-	if (IsValid(runtimeVertexPaintAndDetectionComponent)) {
+	if (IsValid(VertexPaintComp)) {
 
 		paintWithinAreaStruct.meshComponent = meshComponent;
 		paintWithinAreaStruct.componentsToCheckIfIsWithin = componentsToCheckIfIsWithin;
 
 		// Note nothing more should be set here, because if a C++ Class calls the Paint/Detection Function Right Away it shouldn't lose out on anything being set
 
-		runtimeVertexPaintAndDetectionComponent->PaintOnMeshWithinArea(paintWithinAreaStruct, additionalDataToPassThrough);
+		VertexPaintComp->PaintOnMeshWithinArea(paintWithinAreaStruct, additionalDataToPassThrough);
 	}
 
 	else {
@@ -161,15 +161,15 @@ void VertexPaintFunctions::PaintOnMeshWithinArea_Wrapper(UVertexPaintDetectionCo
 
 // Paint on Entire Mesh Wrapper
 
-void VertexPaintFunctions::PaintOnEntireMesh_Wrapper(UVertexPaintDetectionComponent* runtimeVertexPaintAndDetectionComponent, UPrimitiveComponent* meshComponent, FVertexPaintOnEntireMeshStruct paintOnEntireMeshStruct, FVertexDetectAdditionalDataToPassThrough additionalDataToPassThrough) {
+void VertexPaintFunctions::PaintOnEntireMesh_Wrapper(UVertexPaintDetectionComponent* VertexPaintComp, UPrimitiveComponent* meshComponent, FVertexPaintOnEntireMeshStruct paintOnEntireMeshStruct, FVertexDetectAdditionalDataToPassThrough additionalDataToPassThrough) {
 
-	if (IsValid(runtimeVertexPaintAndDetectionComponent)) {
+	if (IsValid(VertexPaintComp)) {
 
 		paintOnEntireMeshStruct.meshComponent = meshComponent;
 
 		// Note nothing more should be set here, because if a C++ Class calls the Paint/Detection Function Right Away it shouldn't lose out on anything being set
 
-		runtimeVertexPaintAndDetectionComponent->PaintOnEntireMesh(paintOnEntireMeshStruct, additionalDataToPassThrough);
+		VertexPaintComp->PaintOnEntireMesh(paintOnEntireMeshStruct, additionalDataToPassThrough);
 	}
 
 	else {
@@ -183,15 +183,15 @@ void VertexPaintFunctions::PaintOnEntireMesh_Wrapper(UVertexPaintDetectionCompon
 
 // Paint Color Snippet On Mesh
 
-void VertexPaintFunctions::PaintColorSnippetOnMesh_Wrappers(UVertexPaintDetectionComponent* runtimeVertexPaintAndDetectionComponent, UPrimitiveComponent* meshComponent, FVertexPaintColorSnippetStruct paintColorSnippetStruct, FVertexDetectAdditionalDataToPassThrough additionalDataToPassThrough) {
+void VertexPaintFunctions::PaintColorSnippetOnMesh_Wrappers(UVertexPaintDetectionComponent* VertexPaintComp, UPrimitiveComponent* meshComponent, FVertexPaintColorSnippetStruct paintColorSnippetStruct, FVertexDetectAdditionalDataToPassThrough additionalDataToPassThrough) {
 
-	if (IsValid(runtimeVertexPaintAndDetectionComponent)) {
+	if (IsValid(VertexPaintComp)) {
 
 		paintColorSnippetStruct.meshComponent = meshComponent;
 
 		// Note nothing more should be set here, because if a C++ Class calls the Paint/Detection Function Right Away it shouldn't lose out on anything being set
 
-		runtimeVertexPaintAndDetectionComponent->PaintColorSnippetOnMesh(paintColorSnippetStruct, additionalDataToPassThrough);
+		VertexPaintComp->PaintColorSnippetOnMesh(paintColorSnippetStruct, additionalDataToPassThrough);
 	}
 
 	else {
